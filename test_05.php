@@ -23,8 +23,13 @@
         $con= new mysqli('localhost','root','','txt') or die (mysqli_error($con));
         $result = $con ->query("SELECT *FROM client") or die($con->error);
     ?>
-
-    <?php
+  
+    <div class="row justify-content-center text-light bg-dark" >
+        <h1> PHP&SQL</h1>
+    </div>
+    
+<div class ="container" >
+     <?php
         if(isset($_SESSION['message'])):
     ?>
 
@@ -35,12 +40,7 @@
             unset($_SESSION['message']);
         ?>
     </div>
-
     <?php endif ?>
-    <div class="row justify-content-center text-light bg-dark" >
-        <h1> PHP&SQL</h1>
-    </div>
-<div class ="container" >
     <div class="row justify-content-center" >
         <div class="col-md-3 shadow-sm p-3 mb-5 bg-white rounded">
             <form action="combine.php" method="POST">
